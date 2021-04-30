@@ -23,7 +23,7 @@ class Car implements Comparable<Car>{
     private String name;
     private int speed;
     private Engine engine;
-
+    private Salon salon;
     @Override
     public int compareTo(Car o) {
         return this.getSpeed() - o.getSpeed();
@@ -51,7 +51,7 @@ class Car implements Comparable<Car>{
             this.name = name;
         }
     }
-    private Salon salon;
+
     class Salon{
        private String typeSalon;
 
