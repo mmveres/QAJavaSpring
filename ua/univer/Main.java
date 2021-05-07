@@ -1,11 +1,21 @@
 package ua.univer;
 
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
 
     public static void main(String[] args) {
+        Pattern p1 = Pattern.compile("[\\S]+");
+        Matcher m1 = p1.matcher("h");
+        boolean b = m1.matches();
+        System.out.println(b);
+       // swapingTest();
+    }
+
+    private static void swapingTest() {
         int a = 30;
         int b = 45;
         swapFunction(a, b);
