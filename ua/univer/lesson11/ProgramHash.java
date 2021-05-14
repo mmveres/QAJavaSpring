@@ -130,8 +130,23 @@ class ListLinkedShip implements Iterable<Ship>{
 
     @Override
     public Iterator<Ship> iterator() {
-        return new ListShipIterator(head);
+        return new Iterator<Ship>() {
+            @Override
+            public boolean hasNext() {
+                return false;
+            }
+
+            @Override
+            public Ship next() {
+                return null;
+            }
+        };
     }
+
+    //    @Override
+//    public Iterator<Ship> iterator() {
+//        return new ListShipIterator(head);
+//    }
     class ListShipIterator implements Iterator<Ship>{
         ListNode iter;
 

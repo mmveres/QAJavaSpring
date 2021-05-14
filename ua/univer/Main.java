@@ -1,6 +1,7 @@
 package ua.univer;
 
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -8,11 +9,39 @@ public class Main {
 
 
     public static void main(String[] args) {
+        int n = 1234;
+        System.out.format("|%d\t\t|%n", n);
+        System.out.format("|%08d\t|%n", n);
+        System.out.format("|%+8d\t|%n", n);
+        System.out.format("|%,8d\t|%n", n);
+        System.out.format("|%+,8d\t|%n", n);
+
+        double pi = Math.PI;
+        System.out.format("|Math.PI\t|%n", n);
+        System.out.format("|%f\t|%n", pi);
+        System.out.format("|%.3f\t\t|%n", pi);
+        System.out.format("|%8.3f\t|%n", pi);
+
+        Integer number = n;
+        // Бинарный формат числа
+        String convert = Integer.toBinaryString(number);
+        System.out.println(convert);
+
+        // Восьмиричная форма
+        convert = Integer.toOctalString(number);
+        System.out.println(convert);
+
+        // Шеснадцатиричная форма
+        convert = Integer.toHexString(number).toUpperCase();
+        System.out.println(convert);
+
+    }
+
+    private static void patternOut() {
         Pattern p1 = Pattern.compile("[\\S]+");
         Matcher m1 = p1.matcher("h");
         boolean b = m1.matches();
         System.out.println(b);
-       // swapingTest();
     }
 
     private static void swapingTest() {
